@@ -44,6 +44,14 @@ body {
         transform: skewY(1deg) skewX(5deg) scale(1.1);
         text-shadow: 0 1rem 3rem rgba($color-black, .2);
     }
+
+    &--2 {
+        background-image: none;
+        background-color: $color-primary;
+        color: $color-white;
+        -webkit-background-clip: border-box;
+        background-clip: border-box;
+    }
 }
 
 .heading-tertiary {
