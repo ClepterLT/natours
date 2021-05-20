@@ -13,6 +13,23 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
 
+    <div class="nav">
+        <input type="checkbox" class="nav__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="nav__button">
+            <span class="nav__icon">&nbsp;</span>
+        </label>
+        <div class="nav__background">&nbsp;</div>
+        <nav class="nav__wrap">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Your benefits</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Popular tours</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Stories</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Book now</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <body>
         <header class="header">
             <div class="header__logo-box">
@@ -49,9 +66,21 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="Nature Photo 1" class="composition__photo composition__photo--1">
-                            <img src="img/nat-2-large.jpg" alt="Nature Photo 2" class="composition__photo composition__photo--2">
-                            <img src="img/nat-3-large.jpg" alt="Nature Photo 3" class="composition__photo composition__photo--3">
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw"
+                                alt="Nature Photo 1"
+                                class="composition__photo composition__photo--1"
+                                src="img/nat-1-large.jpg">
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw"
+                                alt="Nature Photo 2"
+                                class="composition__photo composition__photo--2"
+                                src="img/nat-2-large.jpg">
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw"
+                                alt="Nature Photo 3"
+                                class="composition__photo composition__photo--3"
+                                src="img/nat-3-large.jpg">
                         </div>
                     </div>
                 </div>
@@ -119,7 +148,7 @@
                                         <p class="card__price-only">Only</p>
                                         <p class="card__price-value">$297</p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +176,7 @@
                                         <p class="card__price-only">Only</p>
                                         <p class="card__price-value">$497</p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +204,7 @@
                                         <p class="card__price-only">Only</p>
                                         <p class="card__price-value">$897</p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +228,11 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__shape">
-                            <img src="img/nat-8.jpg" alt="Mary Smith" class="story__img">
+                            <img srcset="img/img/nat-8-small.jpg 1000w, img/nat-8.jpg 2000w"
+                                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 45vw"
+                                alt="Tour photo"
+                                class="story__img"
+                                src="img/nat-8.jpg">
                             <figcaption class="story__caption">Mary Smith</figcaption>
                         </figure>
                         <div class="story__text">
@@ -212,7 +245,11 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__shape">
-                            <img src="img/nat-9.jpg" alt="Jack Wilson" class="story__img">
+                            <img srcset="img/img/nat-9-small.jpg 1000w, img/nat-9.jpg 2000w"
+                                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 45vw"
+                                alt="Tour photo"
+                                class="story__img"
+                                src="img/nat-9.jpg">
                             <figcaption class="story__caption">Jack Wilson</figcaption>
                         </figure>
                         <div class="story__text">
@@ -273,7 +310,10 @@
 
         <footer class="footer">
             <div class="footer__logo-wrap">
-                <img src="img/logo-green-2x.png" alt="Natours Logo" class="footer__logo">
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Natours Logo" src="img/logo-green-2x.png">
+                </picture>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -293,6 +333,35 @@
                 </div>
             </div>
         </footer>
+
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img srcset="img/img/nat-8-small.jpg 1000w, img/nat-8.jpg 2000w"
+                                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 45vw"
+                                alt="Tour photo"
+                                class="popup__img"
+                                src="img/nat-8.jpg">
+
+                    <img srcset="img/img/nat-9-small.jpg 1000w, img/nat-9.jpg 2000w"
+                                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 45vw"
+                                alt="Tour photo"
+                                class="popup__img"
+                                src="img/nat-9.jpg">
+                    <!--
+                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                    -->
+                </div>
+                <div class="popup__right">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-mb-1">Read before booking</h2>
+                    <h3 class="heading-tertiary u-mb-1">Important! Please read these terms before booking</h3>
+                    <p class="popup__text u-mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc vel risus commodo viverra maecenas accumsan lacus vel. Eget sit amet tellus cras adipiscing enim. Arcu non sodales neque sodales. Tincidunt augue interdum velit euismod in pellentesque massa placerat. Tortor aliquam nulla facilisi cras fermentum. Orci porta non pulvinar neque laoreet suspendisse interdum. Amet tellus cras adipiscing enim eu. Cursus risus at ultrices mi tempus. Purus sit amet luctus venenatis lectus magna.</p>
+                    <a href="#" class="btn btn--green">Book now</a>
+                </div>
+            </div>
+        </div>
 
         <!--
         <section class="grid-test">
